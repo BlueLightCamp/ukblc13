@@ -1,0 +1,19 @@
+
+Here is a collection of open data that might be useful material for the hackathon. Of course you are not limited by these sources
+
+Please feel free to send us more to update this list.
+
+Police API
+----------
+
+The Police API allows you to retrieve information about neighbourhood areas in all 43 English & Welsh police forces and for the Police Service of Northern Ireland. All forces are required to keep this data accurate and up to date, so the API provides a rich and definitive data source 
+
+http://data.police.uk/api/docs/
+
+Roads Datasets
+--------------
+
+Dept for Transport - Road Accidents, Road safety spend, Residential population by highways authority, Road traffic, Road lengths
+
+http://road-collisions.dft.gov.uk/datasets
+
