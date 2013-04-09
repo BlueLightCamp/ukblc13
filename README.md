@@ -6,6 +6,10 @@ BlueLightCamp 2013 Hackathon
 
 This is a free to attend and open event but you have to register to participate - http://blc13-eorg.eventbrite.co.uk/
 
+### Suggest a challenge or idea
+http://www.simpl.co/challenges/25-bluelightcamp-2013
+Come along and pitch your idea to the group
+
 2013 Hackathon - ukblc13
 ------------------------
 All BlueLightCamp attendees are invited to participate in our first hackathon on Sunday, April 28th, the day after the unconference. Hackathon participants will form teams, and each team will work through the day to create apps that leverage the data we have gathered to the benefit of emergency services. 
@@ -16,7 +20,7 @@ All BlueLightCamp attendees are invited to participate in our first hackathon on
 There will be an introductory session about the hackathon at the BlueLightCamp Unconference. It may be that people start to form teams and get started on Saturday night.
    
 #### Sunday, April 28th at 09:30
-The hackathon officially begins! An introductory session will explain the day and help those who wish to form groups to work through the day to get started and pick a challenge to work on.
+The hackathon officially begins! An introductory session will explain the day and help those who wish to form groups to work through the day to get started and pick a challenge to work on. People who have suggested ideas are invited to pitch them to the group
  
 #### Sunday Daytime
 Teams work through the day, creating hacks which use open data for their selected challenge. Experts from our sponsors are on-site to provide troubleshooting and coaching throughout the day. Lunch is provided.
