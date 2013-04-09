@@ -1,7 +1,9 @@
+Open Data
+=========
 
-Here is a collection of open data that might be useful material for the hackathon. Of course you are not limited by these sources
+Here is a collection of open data that might be useful material for the hackathon. Of course you are not limited by these sources and may use whatever data you choose.
 
-Please feel free to send us more to update this list.
+Please feel free to send us more sources to update this list.
 
 Police API
 ----------
