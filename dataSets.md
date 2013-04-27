@@ -38,6 +38,18 @@ The data for each indicator for the 2012 Health Profiles can be downloaded as Ex
 
 http://www.apho.org.uk/resource/view.aspx?RID=116446
 
+Environment Agency
+------------------
+There is over a Gigabyte of data here, you gain access after registering.
+Start with Hackaathon DataSets.xlsx 	0.01 	16/03/13 	
+
+It includes :Aerial Photography, Authorised Landfill Sites, Bathing Waters
+Canal and Rivers Trust, Carbon Reduction Commitment Data, Catchment Abstraction Management Strategies (CAMS) Reference Boundaries, Colour Infra-Red 50cm, Consented Discharges, Dangerous Substances, Digital River Network,Discharges of Consented Redlist Substances 2012, End Of Life Vehicles Register, English Heritage, Environmental Permitting Regulations, Environmental Pollution Incident,
+Eutrophic Rivers, Flood Data, Groundwater Status Objectives, Hazardous Waste Data,
+, Height Data, Historic Flood Map, Historic Indicators for Rivers Biology, Chemistry and Nutrients, Mining Waste Directive EMMS notifications, Natural England, Otter Survey Data 1977-2010, Outfall Discharge Points,Pesticides, Pollution Inventory 2012, River Obstructions, River Quality Objectives General Quality Assessment, River Sampling Data, Salt Marsh Extents & Species, Seagrass Taxa and Abundance, Shoreline Management, Source Protection Zones, Summary Shellfish Directive Assessments 2011, Surface Water Status Objectives, UK Hydrographic Office, Water Framework Directive, Where To Go Fishing
+
+http://isgd/envhackdata
+
 Manchester
 ----------
 http://opendata.manchesterdda.com/
