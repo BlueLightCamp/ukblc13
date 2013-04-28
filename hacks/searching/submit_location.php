@@ -1,9 +1,12 @@
 <?php
 
-$host="localhost"; // Host name
-$username=""; // Mysql username 
-$password=""; // Mysql password 
-$db_name="blc_db"; // Database name 
+// NB: This requires the following variables to be set in config.php:
+// $host
+// $username
+// $password
+// $db_name
+
+require 'config.php';
 
 // Connect to server and select database.
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
