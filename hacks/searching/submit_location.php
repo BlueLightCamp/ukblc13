@@ -41,7 +41,7 @@ if($action=='locate') {
 }
 
 if($action=='chat'){
-	$chat=$_POST['chat'] // Text of the chat
+	$chat=$_POST['chat']; // Text of the chat
 	$lat=$_POST['lat'];
 	$long=$_POST['long'];
 	$id=$_POST['id'];    // User's ID number
