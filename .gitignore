@@ -1,0 +1,6 @@
+# Git Ignore file for ukblc13 repo
+
+# One file to be ignored is the database config, we don't
+# want to be giving out database connection credentials just for fun.
+
+config.php
