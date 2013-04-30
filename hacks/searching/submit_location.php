@@ -5,12 +5,12 @@
 // $username
 // $password
 // $db_name
-
 require 'config.php';
 
 // Connect to server and select database.
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
+$sql = '';
 
 // Get values passed in...
 
@@ -18,9 +18,7 @@ mysql_select_db("$db_name")or die("cannot select DB");
 // register
 // locate
 // chat
-// 
-$action=$_POST[action];
-
+$action=$_POST['action'];
 
 // They're registering as a new searcher - add them into the database, and return an id
 if($action=='register'){
@@ -41,7 +39,7 @@ if($action=='locate') {
 	// To simplify the INSERT or UPDATE complexity, we'll simply do a delete, immediately followed by an insert.
 	$sql="DELETE FROM locations WHERE userid = $id;";
 	$result=mysql_query($sql);
-	
+
 	$sql="INSERT INTO locations(lat, long, userid)VALUES($lat, $long, $id);";
 	$result=mysql_query($sql);
 	
@@ -64,15 +62,17 @@ if($action=='chat'){
 	$id=$_POST['id'];    // User's ID number
 
 	$sql="INSERT INTO chat(chat, userid, lat, long )VALUES('$chat', $id, $lat, $long);";
-	$output = "Success"
+	$output = "Success";
 }
 
-$result=mysql_query($sql);
+if($sql){
+	$result=mysql_query($sql);
 
-// if successfully insert data into database, displays message "Successful". 
-if($result){
-	echo $output;
+	// if successfully insert data into database, displays message "Successful". 
+	if($result){
+		echo $output;
+	}
 }
 
 mysql_close();
-?> 
+?>
