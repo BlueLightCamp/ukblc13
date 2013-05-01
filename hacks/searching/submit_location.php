@@ -40,7 +40,9 @@ if($action=='locate') {
 	$sql="DELETE FROM locations WHERE userid = $id;";
 	$result=mysql_query($sql);
 
-	$sql="INSERT INTO locations(lat, long, userid)VALUES($lat, $long, $id);";
+	//$sql="INSERT INTO locations(lat, lon, userid)VALUES($lat, $long, $id);";
+	$sql="INSERT INTO blc_db.locations(userid, lat, lon) VALUES($id, $lat, $long);";
+	
 	$result=mysql_query($sql);
 	
 	// If successfully insert data into database, we now get all the locations (except our own)
