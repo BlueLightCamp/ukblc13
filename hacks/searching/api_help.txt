@@ -1,0 +1,13 @@
+CURL queries to exercise the back end API:
+
+To get a list of the available actions:
+http://localhost/submit_location.php?action=help
+
+To register a new searcher:
+http://localhost/submit_location.php?action=register&forename=tim&surname=coates&mobile=07766687696
+
+To update a searcher's location:
+http://localhost/submit_location.php?action=locate&lat=12.345&long=654.321&id=0
+
+To submit a chat message
+http://localhost/submit_location.php?action=chat&id=0&chat=Hi+there+Tim&lat=1.234&long=3.213

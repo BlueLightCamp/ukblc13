@@ -18,13 +18,13 @@ $sql = '';
 // register
 // locate
 // chat
-$action=$_POST['action'];
+$action=$_GET['action'];
 
 // They're registering as a new searcher - add them into the database, and return an id
 if($action=='register'){
-	$forename=$_POST['forename'];
-	$surname=$_POST['surname'];
-	$mobile=$_POST['mobile'];
+	$forename=$_GET['forename'];
+	$surname=$_GET['surname'];
+	$mobile=$_GET['mobile'];
 
 	$sql="INSERT INTO searchprofile(forename, surname, mobile)VALUES('$forename', '$surname', '$mobile');";
 	$output = mysql_insert_id();
@@ -32,9 +32,9 @@ if($action=='register'){
 
 // They've just sent their latest location - save theirs, then return a collection of other people
 if($action=='locate') {
-	$lat=$_POST['lat'];
-	$long=$_POST['long'];
-	$id=$_POST['id'];
+	$lat=$_GET['lat'];
+	$long=$_GET['long'];
+	$id=$_GET['id'];
 	
 	// To simplify the INSERT or UPDATE complexity, we'll simply do a delete, immediately followed by an insert.
 	$sql="DELETE FROM locations WHERE userid = $id;";
@@ -58,10 +58,10 @@ if($action=='locate') {
 
 // They've just sent in a 'chat' message. Store it into the database - we'll worry about what to do with it from there.
 if($action=='chat'){
-	$chat=$_POST['chat']; // Text of the chat
-	$lat=$_POST['lat'];
-	$long=$_POST['long'];
-	$id=$_POST['id'];    // User's ID number
+	$chat=$_GET['chat']; // Text of the chat
+	$lat=$_GET['lat'];
+	$long=$_GET['long'];
+	$id=$_GET['id'];    // User's ID number
 
 	$sql="INSERT INTO chat(chat, userid, lat, long )VALUES('$chat', $id, $lat, $long);";
 	$output = "Success";
