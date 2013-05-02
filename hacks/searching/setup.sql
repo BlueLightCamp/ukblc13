@@ -21,9 +21,10 @@ CREATE TABLE `locations` (
   CREATE  TABLE `blc_db`.`chat` (
   `id` INT NOT NULL ,           -- Simple autoincrmeenting id for each record.
   `chat` VARCHAR(160) NULL ,    -- The text of the message - limit to 160, so it has the same 'feel' as SMS
-  `userid` INT NULL ,           -- User's ID from searchprofile.id above.
+  `userid` INT NULL ,           -- User's ID from searchprofile.id above. Usually same as fromuser field, apart from replies, and broadcasts.
   `lat` DECIMAL NULL ,          -- Lattitude of user at the point they sent in this chat, or in case of 'outbound' messages, last recorded location of user.
-  `lon` DECIMAL NULL ,         -- Longitude of user (same as for lattitude applies).
+  `lon` DECIMAL NULL ,          -- Longitude of user (same as for lattitude applies).
+  `fromuser` INT NULL,          -- The user creating this statement (Coordinator = -1). See userid above - needed to target replies and enable broadcasts.
   PRIMARY KEY (`id`) );         -- Primary key is the rowid.
 -- now add an index to be able to get chats for a specific user...
 ALTER TABLE `blc_db`.`chat` ADD INDEX `byuser` (`userid` ASC, `id` ASC) ;
