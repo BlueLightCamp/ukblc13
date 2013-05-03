@@ -83,7 +83,7 @@ if($action=='chat'){
 	$long=$_GET['long'];
 	$id=$_GET['id'];    // User's ID number
 
-	$sql="INSERT INTO chat(chat, userid, lat, long )VALUES('$chat', $id, $lat, $long);";
+	$sql="INSERT INTO chat(chat, userid, lat, long) VALUES ('$chat', $id, $lat, $long);";
 	$result=mysql_query($sql);
 	mysql_close();
 
@@ -123,13 +123,36 @@ if($action=='reply') {
 
 	$chat=$_GET['chat'];	// Text of the chat
 	$id=$_GET['id'];	// User's ID number
-	$sql = "INSERT INTO blc_db.chat(chat, userid) VALUES($chat, $id);";
+	$sql = "INSERT INTO blc_db.chat(chat, userid, fromuser) VALUES($chat, $id, -1);";
 	$sth = mysql_query($sql);
 	mysql_close();
 	
 	
 	// if successfully insert data into database, displays message "Successful". 
-	if($result){
+	if($sth){
+		$response = [
+			"result" => "OK",
+		];
+	} else {
+		$response = [
+			"result" => "ERROR",
+		];		
+	}
+
+	die(json_encode($response));
+}
+
+// This allows the co-ordinator to send the same message to all searchers.
+if($action=='broadcast'){
+
+	$chat=$_GET['chat'];	// Text of the chat
+	$sql = "INSERT INTO blc_db.chat(chat, fromuser) VALUES($chat, -1);";
+	$sth = mysql_query($sql);
+	mysql_close();
+	
+	
+	// if successfully insert data into database, displays message "Successful". 
+	if($sth){
 		$response = [
 			"result" => "OK",
 		];

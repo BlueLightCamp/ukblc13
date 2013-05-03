@@ -3,8 +3,7 @@ CREATE  TABLE `blc_db`.`searchprofile` (
   `id` int(10) unsigned auto_increment PRIMARY KEY not null, -- This is the person's ID number, used in all subsequent transactions.
   `forename` VARCHAR(45) NULL ,                              -- Self explanatory.
   `surname` VARCHAR(45) NULL ,                               -- Self explanatory.
-  `mobile` VARCHAR(45) NULL ,                                -- We will record their mobile number.
-  PRIMARY KEY (`id`) );                                      -- ID is the primary key in this table.
+  `mobile` VARCHAR(45) NULL);                                -- Mobile phone number.
 
 
 -- Table to hold people's locations...
