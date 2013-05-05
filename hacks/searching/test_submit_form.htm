@@ -1,15 +1,19 @@
 <html>
 <body>
-Register<br />
+<h2>Searcher actions</h2>
+<h4>Register</h4>
+Registers as a searcher for a specific search. Gets back an ID which is then used everywhere to identify this searcher.
 <form name="form1" method="get" action="submit_location.php">
 	Action <input name="action" type="text" id="action" value="register"><br />
+	Search ID <input name="search_id" type="text" id="search_id"><br />
 	Forename <input name="forename" type="text" id="forename"><br />
 	Surname <input name="surname" type="text" id="surname"><br />
 	Mobile <input name="mobile" type="text" id="mobile"><br />
 <input type="submit" name="Submit" value="Submit">
 </form>
 
-Submit location<br />
+<h4>Submit location</h4>
+Submits the searcher's current location. Gets back a JSON set of the locations of other searchers on this search.
 <form name="form1" method="get" action="submit_location.php">
 	Action <input name="action" type="text" id="action" value="locate"><br />
 	Lattitude <input name="lat" type="text" id="lat"><br />
@@ -18,15 +22,53 @@ Submit location<br />
 <input type="submit" name="Submit" value="Submit">
 </form>
 
-Chat<br />
+<h4>Chat</h4>
+Submits a chat message to the coordinator.
 <form name="form1" method="get" action="submit_location.php">
 	Action <input name="action" type="text" id="action" value="chat"><br />
 	ID <input name="id" type="text" id="id"><br />
-	Chat <input name="chat" type="text" id="chat"><br />
+	Chat <textarea rows="4" cols="20" name="chat" id="chat"></textarea><br />
 	Lattitude <input name="lat" type="text" id="lat"><br />
 	Longitude <input name="long" type="text" id="long"><br />
 <input type="submit" name="Submit" value="Submit">
 </form>
 
+<h2>Coordinator actions</h2>
+<h4>Create</h4>
+Creates a new search. Gets back an ID number for the search.
+<form name="form1" method="get" action="submit_location.php">
+	Action <input name="action" type="text" id="action" value="create"><br />
+	Name <input name="name" type="text" id="name"><br />
+	Coordinator <input name="coordinator" type="text" id="coordinator"><br />
+	Description <textarea rows="4" cols="50" name="description" id="description"></textarea><br />
+<input type="submit" name="Submit" value="Submit">
+</form>
+
+<h4>Reply</h4>
+Reply to a chat message from a searcher. Can be initiation of a chat, it doesn't need to reply to a previous message.
+<form name="form1" method="get" action="submit_location.php">
+	Action <input name="action" type="text" id="action" value="reply"><br />
+	ID <input name="id" type="text" id="id"><br />
+	Co-Ordinator <input name="coord" type="text" id="coord"><br />
+	Chat <textarea rows="4" cols="20" name="chat" id="chat"></textarea><br />
+<input type="submit" name="Submit" value="Submit">
+</form>
+
+<h4>See locations</h4>
+Get a list of the location sof all searchers on my search.
+<form name="form1" method="get" action="submit_location.php">
+	Action <input name="action" type="text" id="locations" value="locations"><br />
+	Coordinator <input name="coordinator" type="text" id="coordinator"><br />
+<input type="submit" name="Submit" value="Submit">
+</form>
+
+<h4>Broadcast</h4>
+Send a chat message to all searchers on my search.
+<form name="form1" method="get" action="submit_location.php">
+	Action <input name="action" type="text" id="action" value="broadcast"><br />
+	ID <input name="id" type="text" id="id"><br />
+	Chat <textarea rows="4" cols="20" name="chat" id="chat"></textarea><br />
+<input type="submit" name="Submit" value="Submit">
+</form>
 </body>
 </html>
