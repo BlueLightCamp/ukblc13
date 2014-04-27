@@ -14,7 +14,7 @@ function win(youare){
 	
 	// Show the map
 	window.map = L.map('map').setView([lati, longi], 13);
-	L.tileLayer('http://{s}.tile.cloudmade.com/d1daefa850c149108363da69126c8474/997/256/{z}/{x}/{y}.png', {
+	L.tileLayer('http://{s}.tile.cloudmade.com/{api_key}/997/256/{z}/{x}/{y}.png', {
 	    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
 	    maxZoom: 21
 	}).addTo(map);
